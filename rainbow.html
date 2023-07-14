@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Change</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 300px; 
+        }
+        button{
+            cursor: pointer;
+            background-color:aqua;
+            background-image:linear-gradient(aqua,red);
+        }
+        .div{
+    height: 170px;
+    width: 150px;
+     border-top-left-radius: 30%;
+     border-bottom-right-radius: 20%;
+    margin-top:70px;
+    margin-left:20px;
+}
+.id1,.id2{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(59, 182, 82);
+    border-radius: 20px;
+
+}
+
+    </style>
+</head>
+<body>
+    <button>Click here..</button>
+    <script>
+        const btn=document.querySelector('button');
+        const body=document.querySelector('body');
+        const color=['Red','Blue','gold','orange','yellow','violet','brown'];
+        body.style.backgroundColor='green';
+        document.addEventListener('click',function(){
+            const colorIndex=parseInt(Math.random()*color.length);
+            body.style.backgroundColor=color[colorIndex];
+        });
+    </script>
+</body>
+</html>
